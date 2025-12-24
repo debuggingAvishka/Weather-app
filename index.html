@@ -3,54 +3,49 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Weather App</title>
+    <title>Weather & Safety App</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="card">
 
-    <!-- SEARCH -->
     <div class="search">
-        <input type="text" placeholder="Enter city name" spellcheck="false">
-        <button><img src="images/search.png"></button>
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button><img src="images/search.png" alt="Search"></button>
     </div>
 
-    <p class="loading">Fetching data...</p>
-    <div class="error">Unable to fetch weather data</div>
+    <p class="loading">Fetching weather data...</p>
+    <p class="error">Unable to fetch data. Try another city.</p>
 
-    <!-- WEATHER -->
     <div class="weather">
 
-        <img class="weather-icon" src="images/clear.png">
+        <img class="weather-icon" src="images/clear.png" alt="Weather">
 
         <h1 class="temp">--°C</h1>
         <h2 class="city">City</h2>
         <p class="description">---</p>
 
-        <!-- EXTRA INFO -->
-        <div class="extra-info">
-            <div><span>Feels Like:</span> <b class="feels">--°C</b></div>
-            <div><span>Pressure:</span> <b class="pressure">-- hPa</b></div>
-            <div><span>Visibility:</span> <b class="visibility">-- km</b></div>
-            <div><span>Sunrise:</span> <b class="sunrise">--</b></div>
-            <div><span>Sunset:</span> <b class="sunset">--</b></div>
+        <div class="grid">
+            <div>Feels Like: <b class="feels">--°C</b></div>
+            <div>Pressure: <b class="pressure">-- hPa</b></div>
+            <div>Visibility: <b class="visibility">-- km</b></div>
+            <div>Humidity: <b class="humidity">--%</b></div>
+            <div>Sunrise: <b class="sunrise">--</b></div>
+            <div>Sunset: <b class="sunset">--</b></div>
         </div>
 
-        <!-- AIR QUALITY -->
         <div class="section">
             <h3>🌫 Air Quality</h3>
             <p class="aqi">--</p>
         </div>
 
-        <!-- ALERTS -->
-        <div class="section alert-section">
+        <div class="section alert">
             <h3>⚠ Weather Alerts</h3>
-            <p class="alerts">No alerts</p>
+            <p class="alerts">No active alerts</p>
         </div>
 
     </div>
-
 </div>
 
 <script src="script.js"></script>
