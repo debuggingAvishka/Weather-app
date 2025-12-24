@@ -179,6 +179,43 @@ body {
         margin: 16px;
         padding: 24px;
     }
+.search-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: all 0.25s ease;
+}
+
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #334155;
+    stroke-width: 2.2;
+    fill: none;
+    transition: stroke 0.25s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+.search-btn:hover svg {
+    stroke: #0f172a;
+}
+.search-btn:active {
+    transform: scale(0.95);
+}
 
     .temp {
         font-size: 56px;
@@ -187,4 +224,8 @@ body {
     .city {
         font-size: 28px;
     }
+}
+.search-btn:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.6);
+    outline-offset: 2px;
 }
