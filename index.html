@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Advanced Weather App</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="card">
-        <div class="search">
-            <input
-                type="text"
-                placeholder="Enter city name"
-                spellcheck="false"
-            />
-            <button>
-                <img src="images/search.png" alt="Search" />
-            </button>
-        </div>
+<div class="card">
 
-        <p class="loading">Fetching weather...</p>
-
-        <div class="error">
-            <p>Invalid city name</p>
-        </div>
-
-        <div class="weather">
-            <img src="images/clear.png" class="weather-icon" />
-
-            <h1 class="temp">--°C</h1>
-            <h2 class="city">City</h2>
-
-            <div class="details">
-                <div class="col">
-                    <img src="images/humidity.png" />
-                    <div>
-                        <p class="humidity">--%</p>
-                        <p>Humidity</p>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <img src="images/wind.png" />
-                    <div>
-                        <p class="wind">-- km/h</p>
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- SEARCH -->
+    <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false">
+        <button><img src="images/search.png"></button>
     </div>
 
-    <script src="script.js"></script>
+    <p class="loading">Fetching data...</p>
+    <div class="error">Unable to fetch weather data</div>
+
+    <!-- WEATHER -->
+    <div class="weather">
+
+        <img class="weather-icon" src="images/clear.png">
+
+        <h1 class="temp">--°C</h1>
+        <h2 class="city">City</h2>
+        <p class="description">---</p>
+
+        <!-- EXTRA INFO -->
+        <div class="extra-info">
+            <div><span>Feels Like:</span> <b class="feels">--°C</b></div>
+            <div><span>Pressure:</span> <b class="pressure">-- hPa</b></div>
+            <div><span>Visibility:</span> <b class="visibility">-- km</b></div>
+            <div><span>Sunrise:</span> <b class="sunrise">--</b></div>
+            <div><span>Sunset:</span> <b class="sunset">--</b></div>
+        </div>
+
+        <!-- AIR QUALITY -->
+        <div class="section">
+            <h3>🌫 Air Quality</h3>
+            <p class="aqi">--</p>
+        </div>
+
+        <!-- ALERTS -->
+        <div class="section alert-section">
+            <h3>⚠ Weather Alerts</h3>
+            <p class="alerts">No alerts</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
