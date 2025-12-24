@@ -6,127 +6,86 @@
 }
 
 body {
-    background: #222;
+    background: #121212;
 }
 
-/* Card */
 .card {
-    width: 90%;
-    max-width: 470px;
+    max-width: 480px;
+    margin: 80px auto;
     background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;
-    margin: 100px auto;
+    padding: 35px;
     border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
 }
 
 /* Search */
 .search {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    gap: 15px;
 }
 
 .search input {
     flex: 1;
-    height: 60px;
+    height: 55px;
     border-radius: 30px;
+    padding: 0 20px;
     border: none;
-    outline: none;
-    padding: 0 25px;
-    font-size: 18px;
-    background: #ebfffc;
-    color: #555;
 }
 
 .search button {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    background: #ebfffc;
-    transition: transform 0.2s ease;
-}
-
-.search button:hover {
-    transform: scale(1.05);
-}
-
-.search button img {
-    width: 16px;
 }
 
 /* States */
-.loading {
-    display: none;
-    margin-top: 20px;
-    font-size: 16px;
-    opacity: 0.85;
-}
-
-.error {
+.loading, .error {
     display: none;
     margin-top: 15px;
-    text-align: left;
-    font-size: 14px;
 }
 
 /* Weather */
 .weather {
     display: none;
-    animation: fadeIn 0.5s ease-in;
+    text-align: center;
 }
 
 .weather-icon {
-    width: 170px;
-    margin-top: 30px;
+    width: 150px;
 }
 
-.weather h1 {
-    font-size: 80px;
-    font-weight: 500;
+.temp {
+    font-size: 72px;
 }
 
-.weather h2 {
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -10px;
+.city {
+    font-size: 36px;
 }
 
-/* Details */
-.details {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
+.description {
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
 
-.col {
-    display: flex;
-    align-items: center;
-    text-align: left;
+/* Extra Info */
+.extra-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 14px;
 }
 
-.col img {
-    width: 40px;
-    margin-right: 10px;
+/* Sections */
+.section {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
 }
 
-.humidity,
-.wind {
-    font-size: 28px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.alert-section {
+    background: rgba(255, 80, 80, 0.25);
 }
